@@ -1,0 +1,427 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch: -1 Eval Loss: 2.325 Eval Acc: 0.098
+Epoch: 000 Train Loss: 2.048 Train Acc: 0.315 Eval Loss: 1.678 Eval Acc: 0.390
+Epoch: 001 Train Loss: 1.497 Train Acc: 0.451 Eval Loss: 1.425 Eval Acc: 0.507
+Epoch: 002 Train Loss: 1.312 Train Acc: 0.523 Eval Loss: 1.157 Eval Acc: 0.585
+Epoch: 003 Train Loss: 1.161 Train Acc: 0.589 Eval Loss: 1.159 Eval Acc: 0.588
+Epoch: 004 Train Loss: 1.051 Train Acc: 0.626 Eval Loss: 1.058 Eval Acc: 0.630
+Epoch: 005 Train Loss: 0.965 Train Acc: 0.661 Eval Loss: 0.937 Eval Acc: 0.678
+Epoch: 006 Train Loss: 0.901 Train Acc: 0.684 Eval Loss: 0.930 Eval Acc: 0.681
+Epoch: 007 Train Loss: 0.852 Train Acc: 0.703 Eval Loss: 0.808 Eval Acc: 0.725
+Epoch: 008 Train Loss: 0.803 Train Acc: 0.722 Eval Loss: 0.764 Eval Acc: 0.736
+Epoch: 009 Train Loss: 0.765 Train Acc: 0.733 Eval Loss: 0.758 Eval Acc: 0.741
+FP32 Model: 
+ ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Fused Model: 
+ ResNet(
+  (conv1): ConvReLU2d(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3))
+    (1): ReLU(inplace=True)
+  )
+  (bn1): Identity()
+  (relu): Identity()
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+QConfig(activation=functools.partial(<class 'torch.ao.quantization.observer.HistogramObserver'>, reduce_range=True){}, weight=functools.partial(<class 'torch.ao.quantization.observer.PerChannelMinMaxObserver'>, dtype=torch.qint8, qscheme=torch.per_channel_symmetric){})
+Quantized int8 Model: 
+ ResNet(
+  (conv1): ConvReLU2d(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3))
+    (1): ReLU(inplace=True)
+  )
+  (bn1): Identity()
+  (relu): Identity()
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2))
+        (1): Identity()
+      )
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+    (1): BasicBlock(
+      (conv1): ConvReLU2d(
+        (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+      )
+      (bn1): Identity()
+      (relu1): Identity()
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): Identity()
+      (skip_add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+      (relu2): ReLU(inplace=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): DynamicQuantizedLinear(in_features=512, out_features=10, dtype=torch.qint8, qscheme=torch.per_tensor_affine)
+)
+FP32 evaluation accuracy: 0.741
+INT8 evaluation accuracy: 0.740
+FP32 CPU Inference Latency: 3.59 ms / sample
+INT8 CPU Inference Latency: 3.06 ms / sample
+INT8 JIT CPU Inference Latency: 2.74 ms / sample
+model:  fp32  	 Size (KB): 44797.956
+model:  int8  	 Size (KB): 44707.074
+1.002033 times smaller
